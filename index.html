@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hiệu Quảng Cáo – Thi công bảng hiệu, in ấn</title>
+  <meta name="description" content="Thi công bảng hiệu Alu, chữ nổi, hộp đèn LED, in bạt, standee, CNC. Báo giá nhanh, bảo hành dài hạn.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- HEADER: thanh trên cùng (nội dung do script.js điền từ SHOP) -->
+  <div class="topbar">
+    <div class="wrap topbar-in">
+      <div class="brand"><span class="logo" id="logo">QC</span><b id="shopName"></b></div>
+      <div class="topinfo" id="topInfo"></div>
+    </div>
+  </div>
+
+  <!-- THANH MENU DỊCH VỤ -->
+  <nav class="menu">
+    <div class="wrap menu-in">
+      <ul id="menuList"></ul>
+      <button class="cta" data-open-quote>NHẬN BÁO GIÁ NHANH</button>
+    </div>
+  </nav>
+
+  <main class="wrap" id="main">
+    <!-- KHU VỰC TRƯNG BÀY & BÁO GIÁ -->
+    <section class="product" id="product">
+      <div class="gallery">
+        <div class="big">
+          <img id="bigImg" alt="Công trình đã thi công">
+          <button class="zoom" id="zoomBtn" aria-label="Phóng to ảnh">🔍</button>
+        </div>
+        <div class="thumbs" id="thumbs"></div>
+      </div>
+
+      <div class="info">
+        <h1 id="pTitle"></h1>
+        <div class="price">
+          <del id="pOld"></del>
+          <strong id="pNew"></strong>
+        </div>
+        <h2>BẢNG GIÁ THAM KHẢO THEO QUY CÁCH</h2>
+        <ul class="pricelist" id="pList"></ul>
+        <ul class="promise" id="pPromise"></ul>
+        <div class="share">
+          <span>Chia sẻ:</span>
+          <button data-share="fb">Facebook</button>
+          <button data-share="zalo">Zalo</button>
+          <button data-share="copy" id="copyBtn">Copy link</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB MÔ TẢ + CÔNG CỤ TÍNH GIÁ -->
+    <section class="tabs">
+      <div class="tabbar">
+        <button class="tab on" data-tab="desc">MÔ TẢ CHI TIẾT</button>
+        <button class="tab" data-tab="calc">TÍNH GIÁ SƠ BỘ</button>
+      </div>
+      <div class="pane on" id="desc"></div>
+      <div class="pane" id="calc">
+        <div class="calc">
+          <label>Chất liệu / quy cách
+            <select id="cMat"></select></label>
+          <label>Chiều dài (m)
+            <input id="cW" type="number" min="0" step="0.1" value="3"></label>
+          <label>Chiều rộng / cao (m)
+            <input id="cH" type="number" min="0" step="0.1" value="1"></label>
+          <div class="result">
+            <span id="cArea"></span>
+            <strong id="cTotal"></strong>
+            <small>* Giá tạm tính, chưa gồm vận chuyển và lắp đặt đặc thù. Liên hệ để có báo giá chính xác.</small>
+          </div>
+          <button class="cta" data-open-quote>Gửi yêu cầu báo giá</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot"><div class="wrap" id="footInfo"></div></footer>
+
+  <!-- NÚT NỔI TRÁI: gọi + Zalo -->
+  <div class="float-left">
+    <a class="pill" id="callPill" href="#"><span>📞</span><b id="callNum"></b></a>
+    <a class="zalo" id="zaloBtn" href="#" target="_blank" rel="noopener" aria-label="Chat Zalo">Zalo</a>
+  </div>
+  <!-- NÚT NỔI PHẢI -->
+  <button class="support" data-open-quote>💬 Hỗ trợ / Tư vấn</button>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox hidden" id="lightbox"><button id="lbClose" aria-label="Đóng">✕</button><img id="lbImg" alt=""></div>
+
+  <!-- POPUP BÁO GIÁ -->
+  <div class="modal hidden" id="quote">
+    <div class="box">
+      <button class="x" id="qClose" aria-label="Đóng">✕</button>
+      <h3>Nhận báo giá nhanh</h3>
+      <p>Để lại thông tin, xưởng sẽ liên hệ lại trong ít phút.</p>
+      <label>Họ tên <input id="qName" placeholder="Nguyễn Văn A"></label>
+      <label>Số điện thoại <input id="qPhone" type="tel" placeholder="09xx xxx xxx"></label>
+      <label>Dịch vụ <select id="qSrv"></select></label>
+      <label>Kích thước / yêu cầu <textarea id="qNote" rows="3" placeholder="VD: Bảng 4m x 1m, mặt tiền cửa hàng"></textarea></label>
+      <div class="actions">
+        <button class="cta" id="qZalo">Gửi qua Zalo</button>
+        <a class="ghost" id="qCall" href="#">Gọi ngay</a>
+      </div>
+      <small id="qMsg"></small>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
