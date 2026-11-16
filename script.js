@@ -2,11 +2,11 @@
    1) THÔNG TIN CỬA HÀNG – sửa ở đây
    ===================================================== */
 const SHOP = {
-  ten: "Quảng Cáo Quốc Bảo",            // 👈 Tên hiệu quảng cáo
-  chuLogo: "QB",                         // 👈 2 chữ cái hiện trong logo
-  sdt: "0900000000",                     // 👈 Số điện thoại (viết liền, không dấu cách) – dùng cho Gọi + Zalo
-  diaChi: "123 Đường ABC, Phường X, TP. Y", // 👈 Địa chỉ xưởng/cửa hàng
-  gio: "Mở cửa: 7:30 – 18:00 (T2 – T7)" // 👈 Giờ làm việc
+  ten: "Quảng Cáo Thắng Andy",            // 👈 Tên hiệu quảng cáo
+  chuLogo: "AD",                         // 👈 2 chữ cái hiện trong logo
+  sdt: "0357122851",                     // 👈 Số điện thoại (viết liền, không dấu cách) – dùng cho Gọi + Zalo
+  diaChi: "G 21B, Tổ 12, khu phố Xuân Bình, Phường Long Khánh,Thành Phố Đồng NaiY", // 👈 Địa chỉ xưởng/cửa hàng
+  gio: "Mở cửa: 7:30 – 16:30 (T2 – T7)" // 👈 Giờ làm việc
 };
 
 /* =====================================================
